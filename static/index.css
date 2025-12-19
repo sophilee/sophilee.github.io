@@ -1,0 +1,182 @@
+html,
+body {
+    background-color: #1b1b1b;
+    color: white;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200px;
+    font-style: normal;
+}
+
+#navbar div {
+    width: 33%;
+}
+
+#navbar {
+    display: flex;
+    padding: 24px 40px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar-right {
+    text-align: right;
+}
+
+#navbar-right a {
+    color: white;
+    padding-left: 20px;
+    font-size: 1.5em;
+}
+
+#navbar-middle {
+    text-align: center;
+}
+
+#navbar-middle a {
+    margin: 0px 20px;
+}
+
+#main {
+    position: relative;
+    padding: 100px 130px;
+    padding-bottom: 1300px;
+    background-image: url("../images/IMG_0761.PNG");
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-position-y: -140px;
+    background-position-x: -98px;
+}
+
+#main div {
+    position: absolute;
+    top: 26%;
+    left: 25%;
+}
+
+#main p {
+    font-size: 1.6em;
+    margin-top: 18px;
+    font-weight: 200;
+}
+
+#main h1 {
+    font-size: 4.5em;
+    font-weight: 460;
+    padding: 0;
+    margin: 0;
+}
+
+#content h1 {
+    padding: 10px;
+    margin: 10px 20px;
+}
+
+#content span {
+    background-color: rgb(235, 235, 235);
+    height: 2px;
+    width: 100%;
+}
+
+#content>div {
+    margin: 60px 80px;
+}
+
+#about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#about-content {
+    text-align: left;
+    margin-left: 6%;
+
+}
+
+#project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#project-gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+#project-gallery>div {
+    background-color: #12191f;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    height: 400px;
+    width: 380px;
+    border-radius: 20px;
+}
+
+#project-img {
+    overflow: hidden;
+    border-radius: 20px;
+    align-self: center;
+    margin-top: 10px;
+    width: 94%;
+    height: 60%;
+}
+
+#project-img img {
+    height: 100%;
+    width: 100%;
+}
+
+
+#project-text {
+    padding: 10px 20px;
+}
+
+#experience-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 46px;
+    margin-bottom: 10px;
+}
+
+#experience-content {
+    display: flex;
+    justify-content: center;
+    padding: 30px 32px;
+}
+
+#experience-text {
+    height: 500px;
+    width: 76%;
+}
+
+#experience-icons {
+    display: flex;
+    flex-direction: column;
+    width: 34%;
+}
+
+#experience-icons div {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#experience-icons img {
+    margin: 10px;
+}
