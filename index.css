@@ -505,6 +505,10 @@ body {
 		font-size: 1.4em;
 		width: 280px;
 	}
+	
+	#navbar {
+		display: none;
+	}
 }
 @media screen and (max-width: 400px) {
 	#main {
