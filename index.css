@@ -1,16 +1,19 @@
+@import 'css/variables.css';
+
 html,
 body {
-	background-color: #161616;
-	color: white;
+	background-color: var(--color-background);
+	color: var(--color-primary-text);
 	scroll-behavior: smooth;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 200px;
 	font-style: normal;
+	overflow-x: hidden;
 }
 
-#navbar div {
-	width: 33%;
+#navbar span {
+	display: none;
 }
 
 #navbar {
@@ -27,22 +30,28 @@ body {
 }
 
 #navbar a {
-	color: white;
+	color: var(--color-primary-text);
 	text-decoration: none;
+}
+
+#navbar-left {
+	flex:1;
 }
 
 #navbar-right {
 	text-align: right;
+	flex:1;
 }
 
 #navbar-right a {
-	color: white;
+	color: var(--color-primary-text);
 	padding-left: 20px;
 	font-size: 1.5em;
 }
 
 #navbar-middle {
 	text-align: center;
+	flex:2;
 }
 
 #navbar-middle a {
@@ -53,7 +62,7 @@ body {
 	position: relative;
 	padding: 100px 140px;
 	padding-bottom: 1250px;
-	background-image: url("images/IMG_0761.PNG");
+	background-image: url("images/hero-paint.webp");
 	background-repeat: no-repeat;
 	background-size: 115%;
 	background-position-y: -140px;
@@ -91,7 +100,7 @@ body {
 }
 
 #content>div {
-	margin: 60px 140px;
+	margin: 60px 180px;
 }
 
 #about {
@@ -120,7 +129,7 @@ body {
 }
 
 #about-intro a {
-	color: white;
+	color: var(--color-primary-text);
 	font-size: 1.6em;
 	padding-right: 15px;
 	text-decoration: none;
@@ -180,21 +189,19 @@ body {
 }
 
 #project-gallery {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
 }
 
 #project-gallery a{
 	text-decoration: none;
-	color: white;
+	color: var(--color-primary-text);
 }
 
 #project-gallery>div {
 	display: flex;
 	flex-direction: column;
 	margin: 10px 14px;
-	width: 380px;
-	padding: 2px 8px 14px 8px;
 	border-radius: 10px;
 	transition: 0.1s;
 }
@@ -220,6 +227,8 @@ body {
 
 #project-text {
 	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
 }
 
 #project-text p {
@@ -399,15 +408,7 @@ body {
 		background-position-x: -200px;
 		padding-bottom: 1000px;
 	}
-}
-@media screen and (max-width: 850px) {
-	#main {
-		background-size: 210%;
-		background-position-y: -60px;
-		background-position-x: -240px;
-		padding-bottom: 1000px;
-	}
-
+	
 	#content>div {
 		margin: 60px 70px;
 	}
@@ -437,11 +438,22 @@ body {
 		justify-content: center;
 		margin-top: 20px;
 	}
+}
+@media screen and (max-width: 850px) {
+	#main {
+		background-size: 210%;
+		background-position-y: -60px;
+		background-position-x: -240px;
+		padding-bottom: 1000px;
+	}
+	
+	#navbar-left,
+	#navbar-right {
+		display: none;
+	}
 
 	#deco-top, #deco-bottom{
-		position: absolute;
-		width: 400px;
-		z-index: -1;
+		display: none;
 	}
 
 	#project-gallery {
@@ -488,6 +500,29 @@ body {
 	#experience-item {
 		padding: 20px 20px;
 	}
+
+	#main h1 {
+		font-size:3.8em ;
+	}
+	
+	#main p {
+		font-size: 1.4em;
+		width: 280px;
+	}
+	
+	#navbar-middle {
+		display: none;
+	}
+
+	#navbar {
+		padding: 20px; 
+	}
+
+	#navbar span {
+		display: flex;
+		font-size: 1.2em;
+		justify-content: flex-end;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -497,19 +532,8 @@ body {
 		background-position-x: -280px;
 		padding-bottom: 800px;
 	}
-	
-	#main h1 {
-		font-size:3.8em ;
-	}
-	#main p {
-		font-size: 1.4em;
-		width: 280px;
-	}
-	
-	#navbar {
-		display: none;
-	}
 }
+
 @media screen and (max-width: 400px) {
 	#main {
 		background-size: 280%;

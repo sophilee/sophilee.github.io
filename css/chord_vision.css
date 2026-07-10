@@ -1,0 +1,23 @@
+@import 'variables.css';
+
+html,
+body {
+	background-color: var(--color-background);
+	color: var(--color-primary-text);
+	scroll-behavior: smooth;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 200px;
+	font-style: normal;
+	overflow-x: hidden;
+}
+
+#main {
+	padding: 100px 390px;
+}
+
+#main h1 {
+	display: flex;
+	justify-content: center;
+}
+
