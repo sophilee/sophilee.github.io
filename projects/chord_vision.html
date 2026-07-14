@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<link rel="stylesheet" href="../css/chord_vision.css">
+		<link rel="stylesheet" href="../css/blog-template.css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,21 +13,172 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
     <body>
+		<div id="navbar">
+			<div id="navbar-left">SL</div>
+			<div id="navbar-middle">
+				<a href="../index.html">Home</a>
+				<a href="../index.html">About</a>
+				<a href="../index.html">Projects</a>
+				<!-- <a href="">Design</a> -->
+			</div>
+			<div id="navbar-right">
+				<a href="mailto:sophx.0573@gmail.com" class="fa-regular fa-envelope"></a>
+				<a href="https://github.com/sophilee" target="_blank" class="fa-brands fa-github"></a>
+				<a href="https://www.linkedin.com/in/sophia-lee-b164932aa/" target="_blank" class="fa-brands fa-linkedin"></a>
+			</div>
+			<span class="fa-solid fa-bars"></span>
+		</div>
 		<div id="main">
+			<div id="header-img">
+				<img src="../images/projects/chord-vision/cv-banner.png" alt="">
+			</div>
 			<h1>Chord Vision</h1>
 			<div id="overview">
-				<p>Role: Main Developer & Coordinator</p>
-				<p>Duration: Feb 2025 - Mar 2025</p>
+				<div>
+					<p id="header">Role</p>
+					<p id="subtitle">Main Developer & Coordinator</p>
+				</div>
+				<div>
+					<p id="header">Duration</p>
+					<p id="subtitle">Feb 2025 - Mar 2025</p>
+				</div>
+				<a id="link" target="_blank" href="https://github.com/sophilee/chord-vision">GitHub Repo</a>
 			</div>
-			<div>
+			<div id="content">
 				<h2>Background</h2>
 				<p>For this project, our team was honoured to be a part of the 
 					IMPACT (Interdisciplinary, Mentorship, Practice, Applied, Community, 
-					Transformative) Initiative Project and have Kimberly be the client for
-					 this year. Our task was to design a product that would improve our 
-					 client’s daily living.</p>
+					Transformative) Initiative Project where our task was to design a product
+					that would improve our client’s daily living.
+				</p>
+				<p>The goal was for us to create a tool that allowed the client to continue their
+					hobby of playing guitar. Since they were experiencing a gradual loss of 
+					hearing and vision, reading sheet music, especially chords, became difficult
+					to do.
+				</p>
+				<p> Therefore, we began our project with the following requirements for the
+					design:</p>
+				<ul>
+					<li>Hands-free</li>
+					<li>Provide audible feedback</li>
+					<li>Portable</li>
+					<li>Accessible</li>
+					<li>Durable</li>
+				</ul>
+				<p>After conduction reasearch, development, and iterative testing, the team produced
+					its final prototype: Chord Vision, a website that interprets and displays
+					sheet music.
+				</p>
+				<p>The user would be able to upload an image of guitar chords or sheet
+					music, and using image processing, the website will display chords into large print 
+					for the user to see. Once uploaded, the music data will be saved into an account which
+					the user can access from any browser or account.
+				</p>
+				<img src="../images/projects/chord-vision/main_page.png" alt="">
+				<img src="../images/projects/chord-vision/list_format.png" alt="">
+				<p id="subtitle">Main Page with Library and Various Note Display Features</p>
+				<p>
+					In addition to just displaying chords, the prototype also allows the user to adjust:
+				</p>
+				<ul>
+					<li>Volume</li>
+					<li>Tempo</li>
+					<li>Forward/Rewind</li>
+					<li>Text-to-speech</li>
+					<li>Music Note Format (Seen in the figure above)</li>
+				</ul>
+				<p>Two outputs can be seen as they depend on the type of music sheet uploaded: For general 
+					guitar chords, the website detects the chord letter; for sheet music, the website 
+					displays the individual notes.
+				</p>
+
+				<h2>Contributions</h2>
+				<p>In addition to inital brainstorm sketches and prototype generations, my main role was
+					developing the sheet-music note detection function and implementing the functionality of 
+					the website, along with some minor styling changes.
+				</p>
+				<p>At the start of the project, I worked on the image recognition function which could extract
+					music note and chord information. This was done using the OpenCV Python library where its blob
+					and line detection features were used to detect the notes and staff lines respectively. 
+				</p>
+				<img src="../images/projects/chord-vision/note_detection_process.png" alt="">
+				<p id="subtitle">Note-Detection Progression: From inital testing to chord detecton</p>
+				<p>Once the notes and staff were detected, the letter of the notes was determined by comparing the 
+					coordinate of notes to the location of lines. Refinements of this process mainly included improving
+					the accuracy of blob (note) and line (staff) detection.
+				</p>
+				<p>As the project progressed, I eventually helped with the front-end. This included:</p>	
+				<ul>
+					<li>Linking Pages</li>
+					<li>Uploaded Music Database (using SQLite and SQLAlchemy)</li>
+					<li>Register/Login</li>
+					<li>Library (Deleting, Uploading, Renaming)</li>
+					<li>Text-to-Speech for Notes</li>
+					<li>List of Notes/Chords</li>
+				</ul>
+				<h2>Design Process</h2>
+				<p>After exploring our design space as much as possible and coming up with both mechanical and 
+					software option, the team decided on a website that could read sheet music.
+				</p>
+				<p>The inital stage focused on the implementation and feasibility of our idea. (This version
+					can be seen in the figure from the previous section.) At this point, the function only 
+					included detecting the top and bottom lines rather than all five, as well as using single 
+					notes instead of whole or half-notes.
+				</p>
+				<p>At the same time, the prototype for the front-end was created in canva.</p>
+				<img src="../images/projects/chord-vision/canvas_combined.png" alt="">
+				<p id="subtitle">Canva prototype</p>
+				<p>Once the idea was proved feasible and we had a basic idea of what the main website would look
+					like, the note detection function was further refined and the website began to be implemented
+					with html/css. 
+				</p>
+				<p>
+					However, we later realized that a second function would be more beneficial to guitar players. 
+					As a result, the Python OCR library was used to detect text from an image of guitar chords.
+				</p>
+				<img src="../images/projects/chord-vision/chord_detection.png" alt="">
+				<p>The program then compared the text to a list of common chords and returns a list of detected 
+					chords.
+				</p>
+				<p>Finally, once the website was complete, we explored different UI themes in order to find colors 
+					with the highest contrast and clarity. Out of common accessibility palettes, we ended up choosing
+					blue and yellow. Some minor icon changes were also made after feedback from testers.
+				</p>
+				<div style="display: flex; flex-direction: row; gap: 10px">
+					<img src="../images/projects/chord-vision/theme-v1.png" alt="">
+					<img src="../images/projects/chord-vision/theme-v2.png" alt="">
+					<img src="../images/projects/chord-vision/theme-v3.png" alt="">
+				</div>
+				<div style="display: flex; justify-content: center; margin: 20px 10px; flex-direction: column; align-items: center; gap: 10px">
+					<img src="../images/projects/chord-vision/library-v0.png" alt="" style="width: 40%;">
+					<p id="subtitle">Alternative color themes and inital library design</p>
+				</div>
+				<p>Addition features such as deleting and renaming songs were added in the later stages. Labels on the 
+					upload and tempo were also added for clarification. 
+				</p>
+				<h2>Further Implementations</h2>
+				<p><b>Note-Detecton Refinement: </b>Although this function could detect notes to a high accuracy with 
+					certain sheet music, it was highly dependent on the image and needed more refinement in order to 
+					work for a wider variety of sheet music. </p>
+				<p>To do so, we would need to:</p>
+				<ul>
+					<li>Include the detection of accidentals (sharps, flats, neutrals, key signature)</li>
+					<li>Detect bar lines, half and whole notes, and rests</li>
+					<li>Detect clef (bass, treble, C)</li>
+				</ul>
+				<p><b>Uploading Photo: </b>To implement the team’s initial plan to include taking pictures rather than 
+					screenshots, a camera feature would be added to the website in addition to the file uploads. 
+				</p>
+				<p>This would also require further modifications with the image processing to account for photo lighting 
+					and angle variations.
+				</p>
+				<p><b>User Features: </b></p>
+				<ul>
+					<li><b>Favourite Folder</b> — A way for users to pin or saved frequently used songs</li>
+					<li><b>Theme Customization</b> — The ability to change interface colours and font size</li>
+					<li><b>Music integration</b> — Allows users to listen to the uploaded songs and play along with the music</li>
+				</ul>
 			</div>
 		</div>
-        
     </body>
 </html>

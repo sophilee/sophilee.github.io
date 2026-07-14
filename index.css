@@ -264,7 +264,7 @@ body {
 
 #experience-item a {
 	margin-top: 0px;
-	color: rgb(167, 167, 167);
+	color:var(--color-secondary-text);
 	line-height: 1.2em;
 }
 
@@ -291,7 +291,7 @@ body {
 
 #experience-right {
 	width: 460px;
-	color: rgb(167, 167, 167);
+	color: var(--color-secondary-text);
 }
 .tags {
 	display: flex;
@@ -302,8 +302,8 @@ body {
 }
 .tag {
 	padding: 6px 10px;
-	border: 2px solid rgb(167, 167, 167);
-	color: rgb(167, 167, 167);
+	border: 2px solid var(--color-secondary-text);
+	color:var(--color-secondary-text);
 	border-radius: 8px;
 	font-size: 0.8em;
 }

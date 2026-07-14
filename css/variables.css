@@ -1,5 +1,5 @@
 :root {
 	--color-background: #161616;
 	--color-primary-text: white;
-	--color-secondary-text:(167, 167, 167);
+	--color-secondary-text: rgb(167, 167, 167);
 }
