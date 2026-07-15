@@ -231,9 +231,18 @@ body {
 	margin-right: 10px;
 }
 
+#project-text p,
+#project-text h2 {
+	margin-bottom: 8px;
+}
+
 #project-text p {
 	color: rgb(221, 221, 221);
+	margin-top: 8px;
+	margin-bottom: 20px;
 }
+
+
 
 #experience-title {
 	display: flex;
@@ -293,6 +302,7 @@ body {
 	width: 460px;
 	color: var(--color-secondary-text);
 }
+
 .tags {
 	display: flex;
 	justify-content: flex-start;
@@ -300,6 +310,7 @@ body {
 	align-items: center;
 	gap: 0.5em;
 }
+
 .tag {
 	padding: 6px 10px;
 	border: 2px solid var(--color-secondary-text);
@@ -312,6 +323,38 @@ body {
 	border: 2px solid rgb(184, 229, 255);
 	color: rgb(184, 229, 255);
 	background-color: rgb(56, 63, 77) ;
+}
+
+.links {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5em;
+	margin-top: 20px;
+}
+
+.link-main, 
+.link-sub {
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-size: 0.8em;
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+
+.link-main {
+	border: 2px solid black;
+	color: black;
+	background-color: white;
+}
+
+.link-sub {
+	border: 2px solid var(--color-primary-text);
+	color: var(--color-primary-text);
+	background-color: rgb(57, 61, 68);
 }
 
 @media screen and (max-width: 1625px) {
